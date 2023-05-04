@@ -1,10 +1,10 @@
-FROM logstash:7.16.3
+FROM logstash:8.7.1
 
 USER logstash
-ENV PATH /usr/share/logstash/vendor/jruby/bin:/usr/share/logstash/vendor/bundle/jruby/2.5.0/bin:/usr/share/logstash/jdk/bin:$PATH
+ENV PATH /usr/share/logstash/vendor/jruby/bin:/usr/share/logstash/vendor/bundle/jruby/2.6.0/bin:/usr/share/logstash/jdk/bin:$PATH
 ENV LOGSTASH_PATH /usr/share/logstash
-ENV GEM_PATH /usr/share/logstash/vendor/bundle/jruby/2.5.0
-ENV GEM_HOME /usr/share/logstash/vendor/bundle/jruby/2.5.0
+ENV GEM_PATH /usr/share/logstash/vendor/bundle/jruby/2.6.0
+ENV GEM_HOME /usr/share/logstash/vendor/bundle/jruby/2.6.0
 
 RUN gem install bundler:2.3.6
 
